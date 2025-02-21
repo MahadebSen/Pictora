@@ -44,6 +44,8 @@ export async function updateUser(clerkId: string, user: UpdateUserParams) {
       new: true,
     });
 
+    console.log("updatedUser", updatedUser);
+
     if (!updatedUser) throw new Error("User update failed");
 
     return JSON.parse(JSON.stringify(updatedUser));
