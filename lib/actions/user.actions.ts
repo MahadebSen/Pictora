@@ -12,7 +12,6 @@ export async function createUser(user: CreateUserParams) {
     await connectToDatabase();
 
     const newUser = await User.create(user);
-    console.log("newUser", newUser);
 
     return JSON.parse(JSON.stringify(newUser));
   } catch (error) {
@@ -43,8 +42,6 @@ export async function updateUser(clerkId: string, user: UpdateUserParams) {
     const updatedUser = await User.findOneAndUpdate({ clerkId }, user, {
       new: true,
     });
-
-    console.log("updatedUser", updatedUser);
 
     if (!updatedUser) throw new Error("User update failed");
 
@@ -86,8 +83,6 @@ export async function updateCredits(userId: string, creditFee: number) {
       { $inc: { creditBalance: creditFee } },
       { new: true }
     );
-
-    console.log(updateCredits);
 
     if (!updatedUserCredits) throw new Error("User credits update failed");
 
