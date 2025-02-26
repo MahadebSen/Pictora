@@ -29,7 +29,6 @@ export const connectToDatabase = async () => {
     });
 
   cached.conn = await cached.promise;
-  console.log("conn: ", cached.conn);
 
   return cached.conn;
 };
