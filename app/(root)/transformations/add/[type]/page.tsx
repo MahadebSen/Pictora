@@ -2,6 +2,10 @@ import Header from "@/components/shared/Header";
 import React, { FC } from "react";
 import { transformationTypes } from "@/constants";
 
+type SearchParamProps = {
+  type: string;
+};
+
 type AddTransformationTypePageProps = {
   params: SearchParamProps;
 };
