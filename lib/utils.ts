@@ -90,7 +90,6 @@ export const debounce = (func: (...args: any[]) => void, delay: number) => {
   return (...args: any[]) => {
     if (timeoutId) clearTimeout(timeoutId);
     timeoutId = setTimeout(() => func.apply(null, args), delay);
-    console.log("Debounced");
   };
 };
 
