@@ -1,6 +1,7 @@
 import Header from "@/components/shared/Header";
 import React, { FC } from "react";
 import { transformationTypes } from "@/constants";
+import TransformationForm from "@/components/shared/TransformationForm";
 
 type SearchParamProps = {
   type: string;
@@ -16,7 +17,10 @@ const AddTransformationTypePage: FC<AddTransformationTypePageProps> = ({
   const transformation =
     transformationTypes[type as keyof typeof transformationTypes];
   return (
-    <Header title={transformation.title} subtitle={transformation.subTitle} />
+    <>
+      <Header title={transformation.title} subtitle={transformation.subTitle} />
+      <TransformationForm />
+    </>
   );
 };
 
