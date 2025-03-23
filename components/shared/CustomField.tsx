@@ -27,13 +27,6 @@ export const CustomField = ({
   formLabel,
   className,
 }: CustomFieldProps) => {
-  console.log({
-    control,
-    render,
-    name,
-    formLabel,
-    className,
-  });
   return (
     <FormField
       control={control}
