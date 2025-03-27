@@ -6,7 +6,6 @@ type HeaderProps = {
 };
 
 const Header: FC<HeaderProps> = ({ title, subtitle }) => {
-  console.log(title, subtitle);
   return (
     <>
       <h2 className="h2-bold text-dark-600">{title}</h2>
