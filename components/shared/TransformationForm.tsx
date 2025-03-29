@@ -79,7 +79,6 @@ const TransformationForm: FC<TransformationFormProps> = ({
     onChangeField: (value: string) => void
   ) => {
     console.log(value);
-    console.log(onChangeField);
   };
 
   return (
